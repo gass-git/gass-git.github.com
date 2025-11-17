@@ -7,8 +7,6 @@ import { fileURLToPath } from 'node:url'
 (async function(): Promise<void> {
   const __dirname = fileURLToPath(import.meta.url)
   const postsPath = path.resolve(__dirname, '../../posts')
-  console.log(__dirname)
-  console.log(postsPath)
   const files = fs.readdirSync(postsPath, {})
   const postsOutputDir = path.resolve(__dirname, '../../dist/posts')
 
