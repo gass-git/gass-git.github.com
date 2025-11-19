@@ -21,7 +21,7 @@ import chalk from 'chalk'
 
     data.push({
       id: i, 
-      title: (fileName as string).replace('.md', ''), 
+      title: getTitle((fileName as string)), 
       created: stats.birthtime,
       modified: stats.mtime
     })
@@ -45,3 +45,8 @@ import chalk from 'chalk'
 
   console.log(chalk.yellow('All posts have been parsed into HTML ✅'))
 })()
+
+
+function getTitle(fileName: string): string {
+  return fileName.replace('.md', '').replaceAll('-',' ')
+}
