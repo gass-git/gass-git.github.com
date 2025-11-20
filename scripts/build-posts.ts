@@ -17,10 +17,8 @@ import type { PostData } from '../types.d.ts'
   for (const [i, filename] of files.entries()){
     const filePath = path.join(postsPath, filename as string)
     const html = await parseMarkdown(filePath)
-
     const stats = await fsPromises.stat(filePath)
     const fileContent = await fsPromises.readFile(filePath, 'utf-8')
-
     const htmlFilename = (filename as string).replace('.md', '.html')
 
     data.push({
@@ -44,14 +42,9 @@ import type { PostData } from '../types.d.ts'
   }
 
   const jsonPosts = JSON.stringify(data)
-
-  console.log(jsonPosts)
-
-  fs.writeFileSync(`${postsOutputDir}/data.json`, jsonPosts)
-
+  fs.writeFileSync(`${postsOutputDir}/data.json`, jsonPosts)\
   console.log(chalk.yellow('All posts have been parsed into HTML ✅'))
 })()
-
 
 function getTitle(htmlFilename: string): string {
   return htmlFilename.replace('.html', '').replaceAll('-',' ')
