@@ -4,7 +4,7 @@ import fsPromises from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import chalk from 'chalk';
-import type { PostData } from '../types.d.ts';
+import type { PostData } from './types';
 
 (async function (): Promise<void> {
   const __dirname = fileURLToPath(import.meta.url);

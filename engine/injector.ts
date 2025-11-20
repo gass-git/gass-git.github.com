@@ -1,8 +1,8 @@
-import { root } from './main';
+import { root } from '../src/main';
 import { postExists } from './utils';
-import home from './views/home';
-import post from './views/post';
-import notFound from './views/notFound';
+import home from '../src/views/home';
+import post from '../src/views/post';
+import notFound from '../src/views/notFound';
 
 export default async function inject(
   view: 'home' | 'post' | '404',

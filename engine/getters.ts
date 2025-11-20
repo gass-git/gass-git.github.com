@@ -1,6 +1,6 @@
-import type { PostData } from '../types';
-import { root, postsMetaData } from './main';
-import config from './config.json';
+import type { PostData } from './types';
+import { root, postsMetaData } from '../src/main';
+import config from '../src/config.json';
 
 function getPostTitle(id: string): string | undefined {
   return postsMetaData.find((post: PostData) => post.id === id)?.title;

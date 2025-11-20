@@ -1,5 +1,5 @@
-import render from './render';
-import { postExists } from './utils';
+import render from '../engine/render';
+import { postExists } from '../engine/utils';
 
 export default async function router(): Promise<void> {
   const pathname = window.location.pathname;
