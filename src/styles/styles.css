@@ -1,5 +1,41 @@
 @import 'fonts.css';
 
+header {
+  padding: 50px 20px 50px 20px;
+}
+
+header .top {
+  justify-content: left;
+  display: flex;
+}
+
+header .bottom {
+  font-family: 'Inter Regular';
+  font-size: 16px;
+}
+
+.green-font {
+  color: rgb(0, 190, 0);
+}
+
+.yellow-font {
+  color: yellow;
+}
+
+header .main-title {
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Inter Bold';
+  font-size: 35px;
+}
+
+.bolt {
+  margin-right: 8px;
+  padding-top: 0px;
+  width: 40px;
+  height: 40px;
+}
+
 body {
   background-color: rgb(40, 44, 53);
   color: #ffffff;
@@ -35,9 +71,6 @@ code {
 
 a {
   text-decoration: none;
-  color: white;
-  font-family: 'Inter Bold';
-  font-size: 40px;
 }
 
 a:link {

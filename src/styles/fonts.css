@@ -5,7 +5,12 @@
 
 @font-face {
   font-family: 'Inter Regular';
-  src: url('../assets/fonts/inter/Inter_18pt-Regular.ttf');
+  src: url('../assets/fonts/inter/Inter_28pt-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Inter Italic';
+  src: url('../assets/fonts/inter/Inter_28pt-Italic.ttf');
 }
 
 @font-face {

@@ -6,10 +6,29 @@
     <link href="./src/styles/styles.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="padding-20">
-      <a href="/">gass-git</a>
-    </div>
+    <header>
+      <a href="/">
+        <div class="top">
+          <img src="./bolt.png" class="bolt" />
+          <span class="main-title">blazed-past-us</span>
+        </div>
+        <div class="bottom">
+          <span class="green-font">cosmic speed: </span>
+          <span class="yellow-font" id="cosmic-speed"> </span>
+        </div>
+      </a>
+    </header>
     <div id="root"></div>
     <script type="module" src="./src/main.js"></script>
+    <script>
+      new PerformanceObserver((list) => {
+        list.getEntries().forEach((en) => {
+          if (en.name === 'first-contentful-paint') {
+            document.getElementById('cosmic-speed').innerHTML +=
+              `${en.startTime} <span> ms</span>`;
+          }
+        });
+      }).observe({ type: 'paint', buffered: true });
+    </script>
   </body>
 </html>
