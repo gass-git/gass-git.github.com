@@ -9,7 +9,7 @@ export default function home(): string {
       <a href="${post.id}">
         <div class="post-card padding-20">
           <div class="title capitalize-first">${post.title}</div>
-          <p>${beautifyDate(post.created)}</p>
+          <div class="subtitle">${beautifyDate(post.created)}</div>
           <p>${post.brief}</p>
         </div>
       </a>

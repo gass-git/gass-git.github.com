@@ -1,16 +1,13 @@
 @import 'fonts.css';
 
-.wrapper {
+header {
+  padding-top: 20px;
+}
+
+header .wrapper {
   padding: 50px 20px 50px 20px;
   display: flex;
   justify-content: left;
-}
-
-.bolt {
-  margin-right: 8px;
-  margin-top: 2px;
-  width: 63px;
-  height: 63px;
 }
 
 header .top {
@@ -18,9 +15,23 @@ header .top {
   display: flex;
 }
 
+header .main-title {
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Inter Bold';
+  font-size: 35px;
+}
+
 header .bottom {
   font-family: 'Inter Regular';
   font-size: 16px;
+}
+
+.bolt {
+  margin-right: 8px;
+  margin-top: 2px;
+  width: 63px;
+  height: 63px;
 }
 
 a {
@@ -43,13 +54,6 @@ a:visited {
   color: #f5ca2a;
 }
 
-header .main-title {
-  color: white;
-  text-transform: uppercase;
-  font-family: 'Inter Bold';
-  font-size: 35px;
-}
-
 body {
   background-color: rgb(40, 44, 53);
   color: #ffffff;
@@ -65,7 +69,8 @@ body {
 p {
   font-family: 'PT Regular';
   color: #d6d6d6;
-  font-size: 20px;
+  font-size: 18px;
+  text-align: justify;
 }
 
 figure {
@@ -84,6 +89,7 @@ code {
 }
 
 .post-card {
+  margin-top: 20px;
   border-radius: 20px;
 }
 
@@ -91,6 +97,13 @@ code {
   font-family: 'Inter Extra Bold';
   color: rgb(208, 208, 208);
   font-size: 34px;
+}
+
+.post-card .subtitle {
+  font-family: 'Inter Regular';
+  color: #d6d6d6;
+  margin-top: 5px;
+  font-size: 17px;
 }
 
 .post-card:hover {
