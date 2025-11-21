@@ -57,8 +57,9 @@ a:visited {
 body {
   background-color: rgb(40, 44, 53);
   color: #ffffff;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
+  padding: 0 50px 0 50px;
   box-sizing: border-box;
 }
 
@@ -89,6 +90,7 @@ code {
 }
 
 .post-card {
+  padding: 25px 35px 25px 20px;
   margin-top: 20px;
   border-radius: 20px;
 }
@@ -104,6 +106,14 @@ code {
   color: #d6d6d6;
   margin-top: 5px;
   font-size: 17px;
+}
+
+.post-card .trim {
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .post-card:hover {
