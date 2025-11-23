@@ -71,6 +71,10 @@ header .bottom {
   border-top: 30px solid #ffe6ff;
 }
 
+.neon-font-color {
+  color: #82f9ff;
+}
+
 a {
   text-decoration: none;
 }
