@@ -1,0 +1,23 @@
+.post-card {
+  padding: 25px 35px 25px 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.post-card .title {
+  font-family: 'Inter Extra Bold';
+  color: rgb(208, 208, 208);
+  font-size: 34px;
+}
+
+.post-card .trim {
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.post-card:hover {
+  box-shadow: inset 0 0 0 2px rgb(255, 255, 255, 0.2);
+}

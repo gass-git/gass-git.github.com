@@ -1,4 +1,6 @@
 {
   "posts_data_path": "./posts/data.json",
-  "root_id": "root"
+  "root_id": "root",
+  "header_id": "header",
+  "speed_element_id": "speed"
 }

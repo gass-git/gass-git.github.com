@@ -15,4 +15,14 @@ function beautifyDate(d: Date | undefined) {
   });
 }
 
-export { postExists, beautifyDate };
+function showCosmiscSpeed(el: HTMLElement): void {
+  new PerformanceObserver((list) => {
+    list.getEntries().forEach((en) => {
+      if (en.name === 'first-contentful-paint') {
+        el.innerHTML = `<span>${en.startTime} ms</span>`;
+      }
+    });
+  }).observe({ type: 'paint', buffered: true });
+}
+
+export { postExists, beautifyDate, showCosmiscSpeed };

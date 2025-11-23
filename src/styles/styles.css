@@ -1,11 +1,10 @@
 @import 'fonts.css';
-@import 'neon.css';
+@import 'flicker.css';
+@import 'logo.css';
+@import 'post-card.css';
 
 header {
-  padding-top: 20px;
-}
-
-header .wrapper {
+  margin-top: 20px;
   padding: 50px 20px 50px 20px;
   display: flex;
   justify-content: left;
@@ -16,7 +15,7 @@ header .top {
   display: flex;
 }
 
-header .main-title {
+header .top .title {
   color: white;
   text-transform: uppercase;
   font-family: 'Inter Bold';
@@ -28,71 +27,10 @@ header .bottom {
   font-size: 16px;
 }
 
-.bolt-wrapper {
-  position: relative;
-  width: 100px; /* enough to fit triangles */
-  height: 100px;
-  border: 4px solid rgb(71, 71, 252);
-  border-radius: 50%;
-  max-width: 60px;
-  max-height: 60px;
-  margin-right: 20px;
-}
-
-.triangle-wrapper {
-  min-width: 60px;
-  min-height: 60px;
-  filter: drop-shadow(0 0 1px #00edfa63) drop-shadow(0 0 2px #00edfa57)
-    drop-shadow(0 0 3px #00edfa54) drop-shadow(0 0 4px #00edfa6b);
-  animation: flicker 5s infinite;
-}
-
-.top-triangle,
-.bottom-triangle {
-  position: absolute;
-  transform-origin: center;
-}
-
-.top-triangle {
-  top: 19%;
-  left: 33%;
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-bottom: 22.15px solid #ffe6ff;
-}
-
-.bottom-triangle {
-  top: 46%;
-  right: 30%;
-  width: 0;
-  height: 0;
-  border-right: 15px solid transparent;
-  border-top: 22.5px solid #ffe6ff;
-}
-
-.neon-font-color {
-  color: #82f9ff;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:link {
-  text-decoration: none;
-}
-
+a,
+a:link,
 a:visited {
   text-decoration: none;
-}
-
-.green-font {
-  color: rgb(0, 190, 0);
-}
-
-.yellow-font {
-  color: #f5ca2a;
 }
 
 body {
@@ -102,6 +40,14 @@ body {
   margin: 0 auto;
   padding: 0 50px 0 50px;
   box-sizing: border-box;
+}
+
+.yellow {
+  color: #f5ca2a;
+}
+
+.neon {
+  color: #82f9ff;
 }
 
 .capitalize-first::first-letter {
@@ -130,35 +76,11 @@ code {
   border-radius: 20px;
 }
 
-.post-card {
-  padding: 25px 35px 25px 20px;
-  margin-top: 20px;
-  border-radius: 20px;
-}
-
-.post-card .title {
-  font-family: 'Inter Extra Bold';
-  color: rgb(208, 208, 208);
-  font-size: 34px;
-}
-
 .date {
   font-family: 'Inter Regular';
   color: #d6d6d6;
   margin-top: 5px;
   font-size: 17px;
-}
-
-.post-card .trim {
-  display: -webkit-box;
-  line-clamp: 2;
-  -webkit-line-clamp: 2; /* number of lines to show */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-
-.post-card:hover {
-  box-shadow: inset 0 0 0 2px rgb(255, 255, 255, 0.2);
 }
 
 .post {
@@ -170,8 +92,4 @@ code {
   font-family: 'Inter Extra Bold';
   color: rgb(241, 241, 241);
   font-size: 34px;
-}
-
-.padding-20 {
-  padding: 20px;
 }

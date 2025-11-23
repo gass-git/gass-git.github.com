@@ -7,36 +7,20 @@
   </head>
   <body>
     <header>
-      <div class="wrapper">
-        <div class="bolt-wrapper">
-          <div class="triangle-wrapper">
-            <div class="top-triangle"></div>
-            <div class="bottom-triangle"></div>
-          </div>
-        </div>
-
-        <div>
-          <div class="top">
-            <a class="main-title" href="/">blazed-past-us</a>
-          </div>
-          <div class="bottom">
-            <span class="neon-font-color" id="cosmic-speed"> </span>
-          </div>
+      <div class="logo">
+        <div class="wrapper">
+          <div class="top"></div>
+          <div class="bottom"></div>
         </div>
       </div>
+      <div>
+        <div class="top">
+          <a class="title" href="/">blazed-past-us</a>
+        </div>
+        <div class="bottom neon" id="speed"></div>
+      </div>
     </header>
-
     <div id="root"></div>
     <script type="module" src="./src/main.js"></script>
-    <script>
-      new PerformanceObserver((list) => {
-        list.getEntries().forEach((en) => {
-          if (en.name === 'first-contentful-paint') {
-            document.getElementById('cosmic-speed').innerHTML +=
-              `${en.startTime}<span> ms</span>`;
-          }
-        });
-      }).observe({ type: 'paint', buffered: true });
-    </script>
   </body>
 </html>
