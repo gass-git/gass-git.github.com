@@ -1,11 +1,14 @@
 {
-  "name": "blog",
+  "name": "blazed-past-us",
   "version": "1.0.0",
   "description": "",
   "license": "MIT",
   "author": "gass-git",
   "type": "module",
   "main": "index.html",
+  "bin": {
+    "blazed-past-us": "./cli/index.js"
+  },
   "scripts": {
     "build": "vite build && node engine/build-posts.ts",
     "dev": "nodemon --watch src --ext ts,json,css,html --exec \"npm run build && vite preview\""
